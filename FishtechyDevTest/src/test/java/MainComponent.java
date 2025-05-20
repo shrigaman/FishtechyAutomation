@@ -9,6 +9,7 @@ import Components.Users;
 import Components.ChangeUnit.ChangeUnit;
 import Components.LikeCommentSave.LikeCommentSave;
 import Components.Login.LoginPage;
+import Components.Remeasure.Remeasure;
 import Profile.ChangePassword.ChangePassword;
 import Profile.EditProfile.EditProfile;
 import io.appium.java_client.android.AndroidDriver;
@@ -25,8 +26,10 @@ public class MainComponent {
 		
 		//LoginPage.login(driver, wait, "amanmongodb@gmail.com", "Amanmongodb");
 		//EditProfile.editProfile(driver, wait);
-		LoginPage.login(driver, wait, "amanrajbanshi999@gmail.com", "Aman987@#$");
-        ChangeUnit.changeUnit(driver, wait);
+		//LoginPage.login(driver, wait, "amanrajbanshi999@gmail.com", "Aman987@#$");
+        //ChangeUnit.changeUnit(driver, wait);
+		
+		
 		
 		
 		//ChangePassword.changePassword(driver,wait,"Aman6635", "Hello6635");
@@ -34,8 +37,8 @@ public class MainComponent {
 		
 		
 		//Onboarding.onboarding(driver, wait);
-		//LoginPage.login(driver, wait, "amanrajbanshi999@gmail.com", "Aman987@#$");
-
+		LoginPage.login(driver, wait, "amanrajbanshi999@gmail.com", "Aman987@#$");
+		//Remeasure.remeasure(driver, wait);
 		//LikeCommentSave.like_comment_save(driver, wait);
 			       
 			        //	CatchfeedAPI.getAllCatches();
@@ -80,7 +83,7 @@ public class MainComponent {
 		// Search.searchMethod(driver,wait);
 
 		// Tag Guide
-		// TagGuide.tagGuide(driver, wait);
+		 TagGuide.tagGuide(driver, wait);
 
 		// smartlog
 		// SmartLog.smartLog(driver, wait);

@@ -3,11 +3,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import Components.Login.LoginPage;
+
 import java.util.Arrays;
 import java.util.List;
 
 public class TagGuide {
-	public static void tagGuide(AndroidDriver driver, WebDriverWait wait) throws InterruptedException {
+	public static void tagGuide(AndroidDriver driver, WebDriverWait wait) throws InterruptedException,Exception {
 
 		// List of Image Paths
 //        String[] imageXPaths = {
@@ -43,11 +46,11 @@ public class TagGuide {
 		System.out.println("recentButton");
 
 		WebElement pictureButton = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//android.widget.ImageView[@content-desc='Aa, count: 19']")));
+				.visibilityOfElementLocated(By.xpath("//android.widget.ImageView[@content-desc='Aa, count: 20']")));
 		pictureButton.click();
 		System.out.println("pictureButton");
 		WebElement clickImage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
-				"//android.widget.ImageView[@content-desc=\"Image1, 2025-03-29 14:19:28, 6ac06f4c-6936-4e16-8abb-ca35f111b534.jpeg\"]")));
+				"//android.widget.ImageView[@content-desc=\"Image1, 2025-04-07 13:46:48, 0c91c268-71b5-4f48-8e73-b00e5044fb8e.jpeg\"]")));
 		clickImage.click();
 		System.out.println("clickImage");
 		// Click Continue
@@ -69,26 +72,36 @@ public class TagGuide {
 				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@content-desc='Next']")));
 		nextButton.click();
 		System.out.println("nextButton");
-		WebElement TagButton = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//android.view.View[@content-desc=\"Tag Guide\"]")));
-		TagButton.click();
+		//Transfer Owner
+		WebElement TransferOwnerButton = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//android.view.View[@content-desc=\"Transfer Owner\"]")));
+		TransferOwnerButton.click();
 		System.out.println("TagButton");
+//		WebElement TagButton = wait.until(ExpectedConditions
+//				.visibilityOfElementLocated(By.xpath("//android.view.View[@content-desc=\"Tag Guide\"]")));
+//		TagButton.click();
+//		System.out.println("TagButton");
 		WebElement inputfield = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.EditText")));
 		inputfield.click();
 		inputfield.sendKeys("aman");
 		System.out.println("inputfield");
-		WebElement selectButton = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("(//android.widget.Button[@content-desc=\"Select\"])[3]")));
-		selectButton.click();
-		System.out.println("selectButton");
+		WebElement tranfer = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("(//android.widget.Button[@content-desc=\"Transfer\"])[2]")));
+		tranfer.click();
+		//Tag Guide
+//		WebElement selectButton = wait.until(ExpectedConditions
+//				.visibilityOfElementLocated(By.xpath("(//android.widget.Button[@content-desc=\"Select\"])[2]")));
+//		selectButton.click();
+		System.out.println("tranfer");
+		
 		WebElement confirmButton = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@content-desc=\"Confirm\"]")));
 		confirmButton.click();
 		System.out.println("confirmButton");
-		WebElement closeButton = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@resource-id=\"close_button\"]")));
-		closeButton.click();
+//		WebElement closeButton = wait.until(ExpectedConditions
+//				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@resource-id=\"close_button\"]")));
+//		closeButton.click();
 		System.out.println("closeButton");
 		WebElement settingButton = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//android.view.View[@resource-id=\"settings_button\"]")));
@@ -103,7 +116,7 @@ public class TagGuide {
 				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@content-desc=\"Logout\"]")));
 		logoutButton.click();
 		System.out.println("logoutButton");
-		//LoginPage.login(driver, wait, "amanrajbanshi999@gmail.com", "Aman987@#$");
+		LoginPage.login(driver, wait, "amanforedu635@gmail.com", "Aman6635");
 		WebElement notificationButton = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@resource-id=\"notification_button\"]")));
 		notificationButton.click();

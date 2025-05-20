@@ -14,7 +14,7 @@ public class DriverSetup {
 		caps.setCapability("appium:platformVersion", "12");
 		caps.setCapability("appium:deviceName", "TECNO TECNO LF7");
 		caps.setCapability("appium:automationName", "uiautomator2");
-		caps.setCapability("appium:appPackage", "io.futrix.flytechy.dev");
+		caps.setCapability("appium:appPackage", "io.futrix.flytechy.stg");
 		caps.setCapability("appium:appActivity", "io.futrix.flytechy.MainActivity");
 
 		// Initialize Driver
