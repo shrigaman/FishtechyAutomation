@@ -14,9 +14,20 @@ public class DriverSetup {
 		caps.setCapability("appium:platformVersion", "12");
 		caps.setCapability("appium:deviceName", "TECNO TECNO LF7");
 		caps.setCapability("appium:automationName", "uiautomator2");
-		caps.setCapability("appium:appPackage", "io.futrix.flytechy.stg");
+		
+		//dev
+		//caps.setCapability("appium:appPackage", "io.futrix.flytechy.stg");
+		//caps.setCapability("appium:appActivity", "io.futrix.flytechy.MainActivity");
+		
+		//stage
+//		caps.setCapability("appium:appPackage", "io.futrix.flytechy.stg");
+//		caps.setCapability("appium:appActivity", "io.futrix.flytechy.MainActivity");
+		
+		//prod env
+		caps.setCapability("appium:appPackage", "io.futrix.flytechy");
 		caps.setCapability("appium:appActivity", "io.futrix.flytechy.MainActivity");
-
+		
+		
 		// Initialize Driver
 		URL url = URI.create("http://127.0.0.1:4723/wd/hub").toURL();
 		AndroidDriver driver = new AndroidDriver(url, caps);

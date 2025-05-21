@@ -51,7 +51,7 @@ public class LoginPage {
 
         try (Response response = client.newCall(request).execute()) {
             String responseBody = response.body().string();
-            System.out.println("Login API Response: " + responseBody);
+          //  System.out.println("Login API Response: " + responseBody);
 
             if (!response.isSuccessful()) {
                 throw new RuntimeException("Login failed: " + response.code());
@@ -77,7 +77,7 @@ public class LoginPage {
         System.out.println("Login successful for user: " + email);
        // System.out.println("🔐 Access Token (after login): " + TokenStorage.getCurrentAccessToken());
         
-        System.out.println("🔐 Login - Access Token: " + TokenStorage.getValidAccessToken());
+      //  System.out.println("🔐 Login - Access Token: " + TokenStorage.getValidAccessToken());
 
     }
 }

@@ -7,9 +7,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import APIUtility.CatchfeedAPI;
 import Components.Users;
 import Components.ChangeUnit.ChangeUnit;
+import Components.CustomizeCard.CustomizeCard;
 import Components.LikeCommentSave.LikeCommentSave;
 import Components.Login.LoginPage;
+import Components.LoginLogout.LoginLogout;
+import Components.NewFish.NewFish;
 import Components.Remeasure.Remeasure;
+import Components.TagClient.TagClient;
 import Profile.ChangePassword.ChangePassword;
 import Profile.EditProfile.EditProfile;
 import io.appium.java_client.android.AndroidDriver;
@@ -37,32 +41,17 @@ public class MainComponent {
 		
 		
 		//Onboarding.onboarding(driver, wait);
-		LoginPage.login(driver, wait, "amanrajbanshi999@gmail.com", "Aman987@#$");
+		//LoginPage.login(driver, wait, "amanmongodb@gmail.com", "Amanmongodb");
 		//Remeasure.remeasure(driver, wait);
 		//LikeCommentSave.like_comment_save(driver, wait);
 			       
-			        //	CatchfeedAPI.getAllCatches();
-//			        	 try {
-//			                 // Get list of users from CatchfeedAPI
-//			                 List<Users> users = CatchfeedAPI.getAllCatches();
-//
-//			                 
-//			                 if (!users.isEmpty()) {
-//			                	    Users user = users.get(0);  // get the first user
-//			                	    System.out.println(user.getId() + " (" + user.getUsername() + ")");
-//			                	}
-//			                 
-//			                 
-//			                 // Now you can loop through the list and use the data
-////			                 for (Users user : users) {
-////			                     System.out.println(user.getId() + " (" + user.getUsername() + ")");
-////			                 }
-//			             } catch (Exception e) {
-//			                 e.printStackTrace();
-//			             }
+		 for (int i = 0; i < 10; i++) {
+             System.out.println("Iteration: " + (i + 1));
+             LoginLogout.loginLogout(driver, wait);
+         }
 		        
 		    
-		//Catchfeed.CatchFeed(driver,wait);
+		//LoginLogout.CatchFeed(driver,wait);
 		Thread.sleep(5000);
 		
 		// Perform Fish Measurement
@@ -82,12 +71,19 @@ public class MainComponent {
 		// Search Method
 		// Search.searchMethod(driver,wait);
 
+		//Tag client
+		//TagClient.tagClient(driver, wait);
+		
 		// Tag Guide
-		 TagGuide.tagGuide(driver, wait);
+		 //TagGuide.tagGuide(driver, wait);
 
 		// smartlog
 		// SmartLog.smartLog(driver, wait);
-
+		
+		//CustomizeCard.customizeCard(driver, wait);
+//		LoginPage.login(driver, wait, "demotestaman123@gmail.com", "DemoTest");
+//		NewFish.newFish(driver, wait);
+		
 		//Bump.bump(driver, wait);
 //		Comment.Commentsection(driver,wait);
 		

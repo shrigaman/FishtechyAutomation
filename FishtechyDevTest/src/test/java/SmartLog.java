@@ -3,10 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-//import GestureUtils; // import your class
-import io.appium.java_client.AppiumDriver;
-import java.util.Arrays;
-import java.util.List;
+
 
 public class SmartLog {
 	public static void smartLog(AndroidDriver driver, WebDriverWait wait) throws InterruptedException {
@@ -40,11 +37,11 @@ public class SmartLog {
 		System.out.println("recentButton");
 
 		WebElement pictureButton = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//android.widget.ImageView[@content-desc='Aa, count: 19']")));
+				.visibilityOfElementLocated(By.xpath("//android.widget.ImageView[@content-desc='Aa, count: 20']")));
 		pictureButton.click();
 		System.out.println("pictureButton");
 		WebElement clickImage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
-				"//android.widget.ImageView[@content-desc=\"Image1, 2025-03-29 14:19:28, 6ac06f4c-6936-4e16-8abb-ca35f111b534.jpeg\"]")));
+				"//android.widget.ImageView[@content-desc=\"Image1, 2025-04-07 13:46:48, 0c91c268-71b5-4f48-8e73-b00e5044fb8e.jpeg\"]")));
 		clickImage.click();
 		System.out.println("clickImage");
 		// Click Continue
@@ -99,11 +96,11 @@ public class SmartLog {
 		postMeasurementButton.click();
 		System.out.println("postMeasurementButton");
 		// Close Success Message
-		WebElement closeMessage = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@resource-id=\"close_button\"]")));
-
-		closeMessage.click();
-		System.out.println("closeMessage");
+//		WebElement closeMessage = wait.until(ExpectedConditions
+//				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@resource-id=\"close_button\"]")));
+//
+//		closeMessage.click();
+		//System.out.println("closeMessage");
 		WebElement mapbutton = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//android.widget.ImageView[@content-desc=\"Map\"]")));
 		mapbutton.click();
