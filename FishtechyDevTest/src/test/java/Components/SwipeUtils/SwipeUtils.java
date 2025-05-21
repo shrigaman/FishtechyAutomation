@@ -43,5 +43,6 @@ public class SwipeUtils {
         
         
         System.out.println("swipped");
+        System.out.println("swipped again");
 	}
 }
