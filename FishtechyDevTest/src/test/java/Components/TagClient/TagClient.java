@@ -1,3 +1,4 @@
+package Components.TagClient;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -6,16 +7,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Components.Login.LoginPage;
 
-import java.util.Arrays;
-import java.util.List;
 
-public class TagGuide {
-	public static void tagGuide(AndroidDriver driver, WebDriverWait wait) throws InterruptedException,Exception {
+public class TagClient {
+	public static void tagClient(AndroidDriver driver, WebDriverWait wait) throws InterruptedException,Exception {
 
-		// List of Image Paths
-//        String[] imageXPaths = {
-//        		"//android.widget.ImageView[@content-desc=\"Image1, 2025-03-29 14:19:28, 6ac06f4c-6936-4e16-8abb-ca35f111b534.jpeg\"]",    
-//        };
 
 		WebElement feedButton = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//android.widget.ImageView[@content-desc='Feed']")));
@@ -72,38 +67,44 @@ public class TagGuide {
 				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@content-desc='Next']")));
 		nextButton.click();
 		System.out.println("nextButton");
-		//Transfer Owner
-		WebElement TransferOwnerButton = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//android.view.View[@content-desc=\"Transfer Owner\"]")));
-		TransferOwnerButton.click();
-		System.out.println("TagButton");
-//		WebElement TagButton = wait.until(ExpectedConditions
-//				.visibilityOfElementLocated(By.xpath("//android.view.View[@content-desc=\"Tag Guide\"]")));
-//		TagButton.click();
-//		System.out.println("TagButton");
+		
+		WebElement TagClientButton = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//android.view.View[@content-desc=\"Tag Clients\"]")));
+		TagClientButton.click();
+		System.out.println("Tag clientButton");
 		WebElement inputfield = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.EditText")));
 		inputfield.click();
 		Thread.sleep(2000);
 		inputfield.sendKeys("aman");
 		System.out.println("inputfield");
-		WebElement tranfer = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("(//android.widget.Button[@content-desc=\"Transfer\"])[2]")));
-		tranfer.click();
-		//Tag Guide
-//		WebElement selectButton = wait.until(ExpectedConditions
-//				.visibilityOfElementLocated(By.xpath("(//android.widget.Button[@content-desc=\"Select\"])[2]")));
-//		selectButton.click();
-		System.out.println("tranfer");
+		WebElement select1 = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("(//android.widget.Button[@content-desc=\"Select\"])[1]")));
+		select1.click();
+		Thread.sleep(2000);
+		WebElement select2 = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("(//android.widget.Button[@content-desc=\"Select\"])[1]")));
+		select2.click();
+		Thread.sleep(2000);
+		WebElement select3 = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@content-desc=\"Select\"]")));
+		select3.click();
+		Thread.sleep(2000);
+		WebElement save = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@content-desc=\"Save\"]")));
+		save.click();
 		
-		WebElement confirmButton = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@content-desc=\"Confirm\"]")));
-		confirmButton.click();
-		System.out.println("confirmButton");
-//		WebElement closeButton = wait.until(ExpectedConditions
-//				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@resource-id=\"close_button\"]")));
-//		closeButton.click();
-		//System.out.println("closeButton");
+		Thread.sleep(2000);
+		WebElement postMeasurement = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@content-desc=\"Post Measurement\"]")));
+		postMeasurement.click();
+		//Tag Guide
+//		WebElement guidedSection = wait.until(ExpectedConditions
+//				.visibilityOfElementLocated(By.xpath("//android.view.View[@content-desc=\"Guided Tab 2 of 2\"]")));
+//		guidedSection.click();
+		System.out.println("guidedSection");
+		Thread.sleep(5000);
+
 		WebElement settingButton = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//android.widget.ImageView[@resource-id=\"settings_button_button\"]")));
 		settingButton.click();
@@ -112,7 +113,7 @@ public class TagGuide {
 				.visibilityOfElementLocated(By.xpath("//android.view.View[@content-desc=\"Account Settings\"]")));
 		accountSettingButton.click();
 		System.out.println("settingButton");
-		SwipeUtils.swipeDown(driver);
+		//SwipeUtils.swipeDown(driver);
 		WebElement logoutInterfaceButton = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//android.widget.ImageView[@content-desc=\"Logout\"]")));
 		logoutInterfaceButton.click();
@@ -131,18 +132,12 @@ public class TagGuide {
 		outeracceptButton.click();
 		System.out.println("outeracceptButton");
 		Thread.sleep(3000);
-//                  WebElement acceptButton = wait.until(ExpectedConditions.visibilityOfElementLocated(
-//                          By.xpath("//android.widget.Button[@content-desc=\"Accept \"]")));
-//                  acceptButton.click();
-//                  System.out.println("acceptButton");
-//		WebElement acceptButton = wait.until(ExpectedConditions
-//				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@content-desc=\"Accept \"]")));
-//		acceptButton.click();
-//		System.out.println("AcceptButton");
-		WebElement saveMeasurementButton = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//android.widget.Button[@content-desc=\"Save Measurement\"]")));
-		saveMeasurementButton.click();
-		System.out.println("saveMeasurementButton");
+		WebElement guidedSection2 = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//android.view.View[@content-desc=\"Guided Tab 2 of 2\"]")));
+		guidedSection2.click();
+		System.out.println("guidedSection");
 		Thread.sleep(5000);
 	}
 }
+
+
