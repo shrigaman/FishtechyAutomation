@@ -30,7 +30,7 @@ public class SwipeUtils {
         int startX = screenWidth / 2;       // Horizontal center
         int startY = screenHeight / 2;      // Vertical center
         int endY = screenHeight / 10;       // Near the top (10% from top edge)
-
+//Test
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
         Sequence swipe = new Sequence(finger, 1);
 
@@ -40,5 +40,8 @@ public class SwipeUtils {
         swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
         driver.perform(Collections.singletonList(swipe));
+        
+        
+        System.out.println("swipped");
 	}
 }
