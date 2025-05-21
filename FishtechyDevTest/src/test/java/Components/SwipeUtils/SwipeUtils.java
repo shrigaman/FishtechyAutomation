@@ -40,5 +40,8 @@ public class SwipeUtils {
         swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
         driver.perform(Collections.singletonList(swipe));
+        
+        
+        System.out.println("swipped");
 	}
 }
