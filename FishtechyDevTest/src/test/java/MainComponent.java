@@ -41,14 +41,14 @@ public class MainComponent {
 		
 		
 		//Onboarding.onboarding(driver, wait);
-		//LoginPage.login(driver, wait, "amanmongodb@gmail.com", "Amanmongodb");
+		LoginPage.login(driver, wait, "amanmongodb@gmail.com", "Amanmongodb");
 		//Remeasure.remeasure(driver, wait);
-		//LikeCommentSave.like_comment_save(driver, wait);
+		LikeCommentSave.like_comment_save(driver, wait);
 			       
-		 for (int i = 0; i < 10; i++) {
-             System.out.println("Iteration: " + (i + 1));
-             LoginLogout.loginLogout(driver, wait);
-         }
+//		 for (int i = 0; i < 10; i++) {
+//             System.out.println("Iteration: " + (i + 1));
+//             LoginLogout.loginLogout(driver, wait);
+//         }
 		        
 		    
 		//LoginLogout.CatchFeed(driver,wait);

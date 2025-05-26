@@ -19,13 +19,13 @@ public class DriverSetup {
 		//caps.setCapability("appium:appPackage", "io.futrix.flytechy.stg");
 		//caps.setCapability("appium:appActivity", "io.futrix.flytechy.MainActivity");
 		
-		//stage
-//		caps.setCapability("appium:appPackage", "io.futrix.flytechy.stg");
-//		caps.setCapability("appium:appActivity", "io.futrix.flytechy.MainActivity");
+	//	stage
+		caps.setCapability("appium:appPackage", "io.futrix.flytechy.stg");
+		caps.setCapability("appium:appActivity", "io.futrix.flytechy.MainActivity");
 		
 		//prod env
-		caps.setCapability("appium:appPackage", "io.futrix.flytechy");
-		caps.setCapability("appium:appActivity", "io.futrix.flytechy.MainActivity");
+//		caps.setCapability("appium:appPackage", "io.futrix.flytechy");
+//		caps.setCapability("appium:appActivity", "io.futrix.flytechy.MainActivity");
 		
 		
 		// Initialize Driver
